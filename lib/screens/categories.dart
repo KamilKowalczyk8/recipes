@@ -95,7 +95,7 @@ class _CategoriesScreenState extends State<CategoriesScreen>
             ),
           ),
 
-          // Recipes List
+          // Recipes Listt
           Expanded(
             child: Container(
               color: Colors.white,
