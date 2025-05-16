@@ -15,7 +15,7 @@ class MealScreen extends ConsumerWidget {
     final isFavorite = favoriteMeals.contains(meal);
 
     return Scaffold(
-      backgroundColor: Colors.white, // Tło całkowicie białe
+      backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text(meal.title, style: const TextStyle(color: Colors.black)),
         backgroundColor: Colors.white,

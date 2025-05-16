@@ -21,8 +21,7 @@ class CategoryGridItem extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
         decoration: BoxDecoration(
-          color:
-              category.color, // Ustawienie jednolitego koloru zamiast gradientu
+          color: category.color,
           borderRadius: BorderRadius.circular(12),
           border:
               isSelected

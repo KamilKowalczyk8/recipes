@@ -42,11 +42,7 @@ class MainDrawer extends StatelessWidget {
             onTap: () => onSelectScreen('meals'),
           ),
           ListTile(
-            leading: const Icon(
-              Icons.tune,
-              size: 30,
-              color: Colors.black,
-            ), // zmieniona ikona
+            leading: const Icon(Icons.tune, size: 30, color: Colors.black),
             title: const Text(
               'Filters',
               style: TextStyle(color: Colors.black, fontSize: 22),

@@ -7,13 +7,6 @@ import 'package:recipes/screens/filters.dart';
 import 'package:recipes/screens/meals.dart';
 import 'package:recipes/widgets/main_drawer.dart';
 
-const kInitialFilters = {
-  Filter.glutenFree: false,
-  Filter.lactoseFree: false,
-  Filter.vegetarian: false,
-  Filter.vegan: false,
-};
-
 class TabsScreen extends ConsumerStatefulWidget {
   const TabsScreen({super.key});
 
@@ -41,22 +34,15 @@ class _TabsScreenState extends ConsumerState<TabsScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final availableMeals = ref.watch(filteredMealsProvider);
-
-    Widget activePage = Container(
-      color: Colors.white,
-      child: CategoriesScreen(availableMeals: availableMeals),
-    );
+    Widget activePage = CategoriesScreen();
     var activePageTitle = 'Categories';
 
     if (_selectedPageIndex == 1) {
       final favoriteMeals = ref.watch(favoriteMealsProvider);
-      activePage = Container(
-        color: Colors.white,
-        child: MealsScreen(meals: favoriteMeals, title: 'Your Favorites'),
-      );
+      activePage = MealsScreen(meals: favoriteMeals, title: 'Your Favorites');
       activePageTitle = 'Your Favorites';
     }
+
     return Scaffold(
       backgroundColor: Colors.white,
       endDrawer: MainDrawer(onSelectScreen: _setScreen),
@@ -86,19 +72,13 @@ class _TabsScreenState extends ConsumerState<TabsScreen> {
           ),
         ],
       ),
-
       body: activePage,
       bottomNavigationBar: Container(
         decoration: BoxDecoration(
           color: Colors.white,
           boxShadow: [
             BoxShadow(
-              color: const Color.fromARGB(
-                255,
-                151,
-                151,
-                151,
-              ).withValues(alpha: 25),
+              color: const Color.fromARGB(255, 151, 151, 151).withAlpha(64),
               blurRadius: 4,
               offset: const Offset(0, -2),
             ),

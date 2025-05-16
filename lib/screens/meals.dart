@@ -11,7 +11,7 @@ class MealsScreen extends StatelessWidget {
     this.showAppBar = true,
   });
 
-  final String? title; // Zmieniamy na nullable
+  final String? title;
   final List<Meal> meals;
   final bool showAppBar;
 
