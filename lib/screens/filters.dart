@@ -20,7 +20,7 @@ class FiltersScreen extends ConsumerWidget {
         iconTheme: const IconThemeData(color: Colors.black),
       ),
       body: Container(
-        color: Colors.white, // Zmienione tło na biały
+        color: Colors.white,
         child: Column(
           children: [
             const SizedBox(height: 40),
@@ -39,12 +39,8 @@ class FiltersScreen extends ConsumerWidget {
                 'Gluten free meals.',
                 style: TextStyle(color: Colors.black54),
               ),
-              activeColor: const Color(
-                0xFF3B3B3B,
-              ), // Ciemnoszary przełącznik w aktywnym stanie
-              trackColor: WidgetStateProperty.all(
-                const Color(0xFF6D6D6D),
-              ), // Szary suwak w nieaktywnym stanie
+              activeColor: const Color(0xFF3B3B3B),
+              trackColor: WidgetStateProperty.all(const Color(0xFF6D6D6D)),
               contentPadding: const EdgeInsets.only(left: 34, right: 22),
             ),
             const SizedBox(height: 20),
@@ -100,12 +96,8 @@ class FiltersScreen extends ConsumerWidget {
                 'Vegan meals.',
                 style: TextStyle(color: Colors.black54),
               ),
-              activeColor: const Color(
-                0xFF3B3B3B,
-              ), // Ciemnoszary kolor przełącznika
-              trackColor: WidgetStateProperty.all(
-                const Color(0xFF6D6D6D),
-              ), // Szary kolor tła przełącznika
+              activeColor: const Color(0xFF3B3B3B),
+              trackColor: WidgetStateProperty.all(const Color(0xFF6D6D6D)),
               contentPadding: const EdgeInsets.only(left: 34, right: 22),
             ),
           ],

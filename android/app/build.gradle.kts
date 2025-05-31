@@ -1,12 +1,17 @@
 plugins {
     id("com.android.application")
+    // START: FlutterFire Configuration
+    id("com.google.gms.google-services")
+    // END: FlutterFire Configuration
     id("kotlin-android")
     id("dev.flutter.flutter-gradle-plugin")
 }
 
 android {
     namespace = "com.example.recipes"
-    compileSdk = flutter.compileSdkVersion
+    compileSdk = 34
+    targetSdkVersion(34)
+
     ndkVersion = "27.0.12077973"
 
     compileOptions {
@@ -16,7 +21,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.recipes"
-        minSdk = flutter.minSdkVersion
+        minSdkVersion(23)
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
         versionName = flutter.versionName

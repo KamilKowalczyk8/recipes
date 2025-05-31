@@ -1,4 +1,3 @@
-// filters_provider.dart
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:recipes/providers/meals_provider.dart';
 import '../models/meal.dart';
